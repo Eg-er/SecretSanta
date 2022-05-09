@@ -1,0 +1,19 @@
+<h1>Add User</h1>
+
+<p>Enter name and surname to add user</p>
+
+<div>
+  <form [formGroup] = "formdata"  (ngSubmit) = "onClickSubmit(formdata.value)" >
+    <input type = "text" class = "form-control" name = "name" placeholder = "name"
+           formControlName="name">
+
+    <br/>
+
+    <input type = "text" class = "form-control" name="surname"
+           placeholder = "surname" formControlName = "surname">
+    <br/>
+
+    <input [disabled]="formdata.invalid" type = "submit" class = "btn btn-dark" value = "Create">
+  </form>
+</div>
+

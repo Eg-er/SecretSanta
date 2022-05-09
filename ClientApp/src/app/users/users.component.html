@@ -1,0 +1,24 @@
+<h1 id="tableLabel">Secret Santa</h1>
+
+<p>Who is whose secret santa?</p>
+
+<p *ngIf="!users"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="users">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Receiver Name</th>
+      <th>Receiver Surname</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.surname }}</td>
+      <td>{{ user.receiverName }}</td>
+      <td>{{ user.receiverSurname }}</td>
+    </tr>
+  </tbody>
+</table>
